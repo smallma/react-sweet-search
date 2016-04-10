@@ -1,0 +1,40 @@
+{
+  "name": "react-sweet-search",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "babel-plugin-transform-react-constant-elements": "^6.1.20",
+    "babel-plugin-transform-react-inline-elements": "^6.1.20",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babelify": "^7.2.0",
+    "envify": "^3.4.0",
+    "grunt": "^0.4.5",
+    "grunt-browser-sync": "^2.1.3",
+    "grunt-browserify": "^4.0.1",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-uglify": "^0.10.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-env": "^0.4.4",
+    "grunt-notify": "^0.4.3",
+    "grunt-sass": "^1.1.0",
+    "history": "^1.13.0",
+    "load-grunt-tasks": "^3.3.0",
+    "react": "^0.14.3",
+    "react-addons-shallow-compare": "^0.14.7",
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.0",
+    "react-tap-event-plugin": "^0.2.2"
+  },
+  "dependencies": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "grunt": "grunt",
+    "babel": "browserify -e script.jsx -t [ babelify --presets [ es2015 react ] --plugins [ transform-react-constant-elements transform-react-inline-elements ] ]"
+  },
+  "author": "",
+  "license": "ISC"
+}
