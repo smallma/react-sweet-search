@@ -15,7 +15,7 @@ Step 1:
 * npm install --save react-loading
 
 Step 2:
-* include SweetSearch.css in html
+* include SweetSearch.sass
 
 Step 3:
 ```js
