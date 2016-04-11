@@ -17,7 +17,7 @@ export default React.createClass({
   componentWillMount() {
     if (typeof this.props.cancel === 'function') {
       // parse function endSearch to props function cancel from app.jsx
-      this.props.cancel(_endSearch);
+      this.props.cancel(this._endSearch);
     }
   },
 
