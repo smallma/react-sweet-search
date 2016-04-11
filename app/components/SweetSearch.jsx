@@ -23,7 +23,7 @@ export default React.createClass({
 
     setTimeout(function () {
       that.setState({inputClass: 'active ready', btnClass: 'btn__search ready'})
-    }, 600);
+    }, 250);
   },
 
   render: function() {
