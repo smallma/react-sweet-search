@@ -41,14 +41,6 @@ $color-input-shadow: #b5b4b4
     font-size: 28px
     background-color: $color-btn
 
-    svg
-      position: absolute
-      opacity: 1
-
-      top: 15px
-      left: 50%
-      margin-left: -14px
-
     &.click
       font-size: 18px
       svg
@@ -76,3 +68,20 @@ $color-input-shadow: #b5b4b4
       svg
         top: 20px
         margin-left: -9px
+
+
+  .icon__search
+    top: 15px
+    left: 50%
+    margin-left: -14px
+
+  .icon__loading
+    top: 12px;
+    left: 13px;
+
+  .icon__search, .icon__loading
+    position: absolute
+    opacity: 1
+
+    &.disable
+      opacity: 0 !important;

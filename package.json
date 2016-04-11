@@ -30,7 +30,8 @@
   },
   "dependencies": {
     "react-font-awesome": "^1.0.3",
-    "react-icons": "^1.0.3"
+    "react-icons": "^1.0.3",
+    "react-loading": "0.0.9"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

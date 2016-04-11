@@ -8,13 +8,19 @@ const styles = {
   main: {
     width: 800,
     height: 600,
-    backgroundColor: 'lightgray'
+    backgroundColor: 'rgba(0,0,0,0.1)'
   }
 };
 
+const searchFn = function(endSearch) {
+  setTimeout(function () {
+    endSearch();
+  }, 2000);
+}
+
 ReactDOM.render(
   <div style={styles.main}>
-    <SweetSearch />
+    <SweetSearch search={searchFn} />
   </div>,
   document.getElementById("react")
 );
