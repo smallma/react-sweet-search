@@ -21,6 +21,7 @@ Step 3:
 ```js
 import SweetSearch from "./components/SweetSearch.jsx";
 
+
 const searchFn = function(inputValue, endSearch) {
   console.log('inputValue: ' + inputValue);
 
@@ -32,7 +33,6 @@ const searchFn = function(inputValue, endSearch) {
 const cancelFn = function (endSearch) {
   // sometimes needs to cancel search
 }
-
 
 ReactDOM.render(
   <div>
