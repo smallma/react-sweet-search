@@ -30,7 +30,7 @@ export default React.createClass({
     const that = this;
     this.setState({
       inputClass: '',
-      btnClass: 'btn__search click',
+      btnClass: 'btn__search ready click',
       iconSearchClass: 'icon__search',
       iconLoadingClass: 'icon__loading disable'
     });
@@ -43,12 +43,12 @@ export default React.createClass({
     const that = this;
 
     this.setState({
-      btnClass: 'btn__search click',
+      btnClass: 'btn__search ready click',
     });
 
     setTimeout(function () {
       that.setState({
-        btnClass: 'btn__search',
+        btnClass: 'btn__search ready',
         iconSearchClass: 'icon__search disable',
         iconLoadingClass: 'icon__loading'
       });
