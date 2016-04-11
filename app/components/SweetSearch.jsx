@@ -81,7 +81,7 @@ export default React.createClass({
     }
   },
 
-  handleClick: function() {
+  _clickEvents: function () {
     // Handle Search Event
     if ('ready'.indexOf(this.state.inputClass) <= -1) {
       this._handleSearch();
@@ -93,11 +93,22 @@ export default React.createClass({
     ReactDOM.findDOMNode(this.refs.theInput).focus();
   },
 
+  _handleClick: function() {
+    this._clickEvents();
+  },
+
+  _handleKeyPress: function (e) {
+    if (e.key === 'Enter') {
+      console.log('Submit by Enter');
+      this._clickEvents();
+    }
+  },
+
   render: function() {
     return (
       <div className="sweet__search">
-        <input ref="theInput" className={this.state.inputClass} type="text" name="search"></input>
-        <div className={this.state.btnClass} onClick={this.handleClick}>
+        <input ref="theInput" className={this.state.inputClass} type="text" name="search" onKeyPress = {this._handleKeyPress}></input>
+        <div className={this.state.btnClass} onClick={this._handleClick}>
           <FaSearch className={this.state.iconSearchClass} color='#e3e3e3'/>
           <div className={this.state.iconLoadingClass}>
             <Loading type='spinningBubbles' width='33px'/>
