@@ -1,0 +1,78 @@
+$color-btn: #00c6ff
+$color-btn-active: #00a6fe
+$color-btn-shadow: #f3f3f3
+$color-btn-icon: #ffffff
+$color-input-shadow: #b5b4b4
+
+
+.sweet__search
+  input, .btn__search, .btn__search svg
+    display: inline-block
+    vertical-align: middle
+
+  input
+    transition: all 600ms ease
+
+  .btn__search *
+    transition: all 200ms ease
+
+  input
+    height: 60px
+    width: 0
+    padding: 0
+    border: 0
+    font-size: 18px;
+
+    &:focus
+      outline: none
+
+    &.active
+      padding-left: 18px
+      width: 245px
+
+    &.ready
+      box-shadow: 0 3px 5px $color-input-shadow
+
+  .btn__search
+    position: relative
+    width: 60px
+    height: 60px
+    color: $color-btn-icon
+    font-size: 28px
+    background-color: $color-btn
+
+    svg
+      position: absolute
+      opacity: 1
+
+      top: 15px
+      left: 50%
+      margin-left: -14px
+
+    &.click
+      font-size: 18px
+      svg
+        opacity: 0
+        top: 20px
+        margin-left: -9px
+
+    &.ready
+      box-shadow: 0 3px 5px $color-input-shadow
+
+      &:before
+        content: ''
+        position: absolute
+        left: -30px
+        border-color: transparent $color-btn-shadow $color-btn-shadow transparent
+        border-style: solid solid solid solid
+        border-width: 30px 15px
+        height: 0px
+        width: 0px
+
+    &.search
+      background-color: $color-btn-active
+      font-size: 18px
+
+      svg
+        top: 20px
+        margin-left: -9px

@@ -29,6 +29,8 @@
     "react-tap-event-plugin": "^0.2.2"
   },
   "dependencies": {
+    "react-font-awesome": "^1.0.3",
+    "react-icons": "^1.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
