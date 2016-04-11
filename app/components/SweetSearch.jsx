@@ -10,7 +10,8 @@ export default React.createClass({
     };
   },
 
-  _firstClickAnimation: function () {
+  // Show Search
+  _showSearch: function () {
     const that = this;
 
     console.log('handleClick: enable input')
@@ -21,32 +22,36 @@ export default React.createClass({
     }, 250);
   },
 
-  _closeFirstClick: function () {
+  // End Search
+  _endSearch: function () {
     const that = this;
 
     this.setState({inputClass: '', btnClass: 'btn__search click'});
-
     setTimeout(function () {
       that.setState({btnClass: 'btn__search'})
     }, 250);
   },
 
-  handleFirstClick: function() {
-    // prevent
-    if ('activ'.indexOf(this.state.inputClass) <= -1) {
-      this._closeFirstClick();
+  _handleSearch: function () {
+    this._endSearch();
+  },
+
+  handleClick: function() {
+    // Handle Search Event
+    if ('ready'.indexOf(this.state.inputClass) <= -1) {
+      this._handleSearch();
       return;
     }
 
-    // display first animation
-    this._firstClickAnimation.apply(this);
+    // Show Search Animation
+    this._showSearch.apply(this);
   },
 
   render: function() {
     return (
       <div className="sweet__search">
         <input className={this.state.inputClass} type="text" name="search"></input>
-        <div className={this.state.btnClass} onClick={this.handleFirstClick}>
+        <div className={this.state.btnClass} onClick={this.handleClick}>
           <FaSearch />
         </div>
       </div>
