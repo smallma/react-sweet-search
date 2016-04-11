@@ -10,8 +10,8 @@ React based component Search. Enhance user experience of search.
 
 ## How to Use
 Step 1:
-  npm install --save react-icons
-  npm install --save react-loading
+npm install --save react-icons
+npm install --save react-loading
 
 Step 2:
   include SweetSearch.css in html
