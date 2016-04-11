@@ -10,23 +10,33 @@ React based component Search. Enhance user experience of search.
 
 ## How to Use
 Step 1:
-npm install --save react-icons
-npm install --save react-loading
+* npm install --save react-dom
+* npm install --save react-icons
+* npm install --save react-loading
 
 Step 2:
-  include SweetSearch.css in html
+* include SweetSearch.css in html
 
 Step 3:
 ```js
 import SweetSearch from "./components/SweetSearch.jsx";
 
-const searchFn = function(endSearch) {
-  endSearch(); // End Searching icon
+const searchFn = function(inputValue, endSearch) {
+  console.log('inputValue: ' + inputValue);
+
+  setTimeout(function () {
+    endSearch();
+  }, 2000);
 }
+
+const cancelFn = function (endSearch) {
+  // sometimes needs to cancel search
+}
+
 
 ReactDOM.render(
   <div>
-    <SweetSearch search={searchFn} />
+    <SweetSearch search={searchFn} cancel={cancelFn} />
   </div>,
   document.getElementById("react")
 );

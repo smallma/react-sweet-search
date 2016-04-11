@@ -12,15 +12,21 @@ const styles = {
   }
 };
 
-const searchFn = function(endSearch) {
+const searchFn = function(inputValue, endSearch) {
+  console.log('inputValue: ' + inputValue);
+
   setTimeout(function () {
     endSearch();
   }, 2000);
 }
 
+const cancelFn = function (endSearch) {
+  // sometimes needs to cancel search
+}
+
 ReactDOM.render(
   <div style={styles.main}>
-    <SweetSearch search={searchFn} />
+    <SweetSearch search={searchFn} cancel={cancelFn} />
   </div>,
   document.getElementById("react")
 );
