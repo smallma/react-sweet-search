@@ -1,4 +1,6 @@
 import React from 'react';
+import classNames from 'classnames';
+
 import ReactDOM from 'react-dom';
 import FaSearch from 'react-icons/lib/fa/search';
 import Loading from 'react-loading';
@@ -7,10 +9,13 @@ import Loading from 'react-loading';
 export default React.createClass({
   getInitialState() {
     return {
-      inputClass: '',
-      btnClass: 'btn__search',
-      iconSearchClass: 'icon__search',
-      iconLoadingClass: 'icon__loading disable',
+      isInputActive: false,
+      isInputReady: false,
+      isBtnSearchClick: false,
+      isBtnSearchReady: false,
+      // btnClass: 'btn__search',
+      isDisableIconSearch: false,
+      isDisableIconLoading: true
     };
   },
 
@@ -27,14 +32,15 @@ export default React.createClass({
 
     console.log('handleClick: enable input')
     this.setState({
-      inputClass: 'active',
-      btnClass: 'btn__search click'
+      isInputActive: true,
+      isBtnSearchClick: true,
     });
 
     setTimeout(function () {
       that.setState({
-        inputClass: 'active ready',
-        btnClass: 'btn__search ready'
+        isInputReady: true,
+        isBtnSearchClick: false,
+        isBtnSearchReady: true,
       })
     }, 250);
   },
@@ -45,17 +51,24 @@ export default React.createClass({
     const inputDom = ReactDOM.findDOMNode(this.refs.theInput);
 
     this.setState({
-      inputClass: '',
-      btnClass: 'btn__search ready click',
-      iconSearchClass: 'icon__search',
-      iconLoadingClass: 'icon__loading disable'
+      isInputActive: false,
+      isInputReady: false,
+
+      isBtnSearchClick: true,
+      isBtnSearchReady: true,
+
+      isDisableIconSearch: false,
+      isDisableIconLoading: true
     });
 
     setTimeout(function () {
       // empty input
       inputDom.value = '';
 
-      that.setState({btnClass: 'btn__search'})
+      that.setState({
+        isBtnSearchClick: false,
+        isBtnSearchReady: false,
+      })
     }, 250);
   },
 
@@ -64,13 +77,16 @@ export default React.createClass({
     const inputDom = ReactDOM.findDOMNode(this.refs.theInput);
     const inputValue = inputDom.value;
 
-    this.setState({ btnClass: 'btn__search ready click'});
+    this.setState({
+      isBtnSearchClick: true,
+      isBtnSearchReady: true,
+    });
 
     setTimeout(function () {
       that.setState({
-        btnClass: 'btn__search ready',
-        iconSearchClass: 'icon__search disable',
-        iconLoadingClass: 'icon__loading'
+        isBtnSearchClick: false,
+        isDisableIconSearch: true,
+        isDisableIconLoading: false
       });
     }, 250);
 
@@ -83,7 +99,7 @@ export default React.createClass({
 
   _clickEvents: function () {
     // Handle Search Event
-    if ('ready'.indexOf(this.state.inputClass) <= -1) {
+    if (this.state.isInputReady) {
       this._handleSearch();
       return;
     }
@@ -105,12 +121,17 @@ export default React.createClass({
   },
 
   render: function() {
+    let inputClass = classNames({'active': this.state.isInputActive, 'ready': this.state.isInputReady})
+    let btnClass = classNames('btn__search', {'click': this.state.isBtnSearchClick, 'ready': this.state.isBtnSearchReady});
+    let iconSearchClass = classNames('icon__search', {'disable': this.state.isDisableIconSearch});
+    let iconLoadingClass = classNames('icon__loading', {'disable': this.state.isDisableIconLoading});
+
     return (
       <div className="sweet__search">
-        <input ref="theInput" className={this.state.inputClass} type="text" name="search" onKeyPress = {this._handleKeyPress}></input>
-        <div className={this.state.btnClass} onClick={this._handleClick}>
-          <FaSearch className={this.state.iconSearchClass} color='#e3e3e3'/>
-          <div className={this.state.iconLoadingClass}>
+        <input ref="theInput" className={inputClass} type="text" name="search" onKeyPress = {this._handleKeyPress}></input>
+        <div className={btnClass} onClick={this._handleClick}>
+          <FaSearch className={iconSearchClass} color='#e3e3e3'/>
+          <div className={iconLoadingClass}>
             <Loading type='spinningBubbles' width='33px'/>
           </div>
         </div>

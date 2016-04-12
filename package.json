@@ -29,6 +29,7 @@
     "react-tap-event-plugin": "^0.2.2"
   },
   "dependencies": {
+    "classnames": "^2.2.3",
     "react-font-awesome": "^1.0.3",
     "react-icons": "^1.0.3",
     "react-loading": "0.0.9"

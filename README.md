@@ -25,13 +25,13 @@ import SweetSearch from "./components/SweetSearch.jsx";
 const searchFn = function(inputValue, endSearch) {
   console.log('inputValue: ' + inputValue);
 
-  setTimeout(function () {
-    endSearch();
-  }, 2000);
+  endSearch();
 }
 
 const cancelFn = function (endSearch) {
-  // sometimes needs to cancel search
+  // always needs to cancel searching
+
+  endSearch();
 }
 
 ReactDOM.render(
