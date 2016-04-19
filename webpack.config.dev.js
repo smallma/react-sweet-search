@@ -23,15 +23,14 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style', 'css'),
-        include: path.join(__dirname, './app/sass/test.css'),
-        exclude: /node_modules/
+        test: /\.sass$/,
+        loaders: ["style", "css", "sass"],
+        include: path.join(__dirname, 'app/sass'),
       }
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('bundle.css')
+    new webpack.HotModuleReplacementPlugin()
+    // new ExtractTextPlugin('bundle.css')
   ],
 };

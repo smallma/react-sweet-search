@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import FaSearch from 'react-icons/lib/fa/search';
 import Loading from 'react-loading';
 
-// require('../sass/test.css');
+require('../sass/SweetSearch.sass');
 
 
 export default React.createClass({
