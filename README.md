@@ -1,5 +1,7 @@
 # react-sweet-search
+
 [react-sweet-search](https://www.npmjs.com/package/react-sweet-search) as React components
+
 [![NPM](https://nodei.co/npm/react-sweet-search.png)](https://www.npmjs.com/package/react-sweet-search)
 
 ## Description
