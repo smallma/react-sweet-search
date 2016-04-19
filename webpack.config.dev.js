@@ -7,12 +7,12 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
     'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-    './app/app' // Your appʼs entry point
+     path.join(__dirname, 'app/app.js') // Your appʼs entry point
   ],
   output: {
-    path: path.join(__dirname, './dist/js'),
-    filename: 'dist/js/bundle.js',
-    publicPath: '/assets/'
+    path: path.join(__dirname, 'dist/js/'),
+    filename: 'bundle.js',
+    publicPath: '/js/'
   },
   module: {
     loaders: [
