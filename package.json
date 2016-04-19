@@ -1,46 +1,57 @@
 {
   "name": "react-sweet-search",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "## Description",
   "main": "dist/js/SweetSearch.js",
-  "devDependencies": {
-    "babel-plugin-transform-react-constant-elements": "^6.1.20",
-    "babel-plugin-transform-react-inline-elements": "^6.1.20",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-react": "^6.1.18",
-    "babelify": "^7.2.0",
-    "envify": "^3.4.0",
-    "es6ify": "^1.6.0",
-    "grunt": "^0.4.5",
-    "grunt-browser-sync": "^2.1.3",
-    "grunt-browserify": "^4.0.1",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-copy": "^0.8.2",
-    "grunt-contrib-uglify": "^0.10.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-env": "^0.4.4",
-    "grunt-notify": "^0.4.3",
-    "grunt-sass": "^1.1.0",
-    "history": "^1.13.0",
-    "load-grunt-tasks": "^3.3.0",
-    "react": "^0.14.3",
-    "react-addons-shallow-compare": "^0.14.7",
-    "react-dom": "^0.14.3",
-    "react-router": "^1.0.0",
-    "react-tap-event-plugin": "^0.2.2",
-    "react-tools": "^0.13.3"
+  "bugs": {
+    "url": "https://github.com/smallma/react-sweet-search/issues"
   },
+  "keywords": [
+    "react",
+    "react-component",
+    "search",
+    "image"
+  ],
   "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
     "classnames": "^2.2.3",
     "react-font-awesome": "^1.0.3",
     "react-icons": "^1.0.3",
     "react-loading": "0.0.9"
   },
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.7.6",
+    "babel-eslint": "^6.0.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-react-constant-elements": "^6.1.20",
+    "babel-plugin-transform-react-inline-elements": "^6.1.20",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.17.0",
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.3.0",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "jsx-loader": "^0.13.2",
+    "node-sass": "^3.4.2",
+    "react-addons-shallow-compare": "^0.14.7",
+    "react-hot-loader": "^1.3.0",
+    "react-tap-event-plugin": "^0.2.2",
+    "react-tools": "^0.13.3",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.12.4",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "grunt": "grunt",
-    "build": "babel app/components/SweetSearch.jsx --out-file dist/js/SweetSearch.js",
-    "prepublish": "npm run build"
+    "build": "babel app/components/SweetSearch.js --out-file dist/js/SweetSearch.js",
+    "prepublish": "npm run build",
+    "start": "babel-node server.js",
+    "build-example": "npm run build && webpack --config webpack.config.js"
   },
   "babel": {
     "presets": [
@@ -50,10 +61,9 @@
     "ignore": [
       "dist/**/*.js",
       "webpack.config.js",
-      "webpack.config.dev.js",
-      "bundle.js"
+      "webpack.config.dev.js"
     ]
   },
-  "author": "",
+  "author": "smallma",
   "license": "ISC"
 }

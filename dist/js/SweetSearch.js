@@ -26,6 +26,8 @@ var _reactLoading2 = _interopRequireDefault(_reactLoading);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// require('../sass/test.css');
+
 exports.default = _react2.default.createClass({
   displayName: 'SweetSearch',
   getInitialState: function getInitialState() {

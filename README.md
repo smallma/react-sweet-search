@@ -31,7 +31,7 @@ Step 2:
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import SweetSearch from "./components/SweetSearch.jsx";
+import SweetSearch from "react-sweet-search";
 
 
 const searchFn = function(inputValue, endSearch) {

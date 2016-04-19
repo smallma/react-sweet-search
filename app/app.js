@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import SweetSearch from "./components/SweetSearch.jsx";
+import SweetSearch from "./components/SweetSearch.js";
+
+// require('./sass/test.css');
 
 
 const styles = {

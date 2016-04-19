@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom';
 import FaSearch from 'react-icons/lib/fa/search';
 import Loading from 'react-loading';
 
+// require('../sass/test.css');
+
 
 export default React.createClass({
   getInitialState() {
