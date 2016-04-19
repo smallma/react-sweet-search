@@ -39,9 +39,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "grunt": "grunt",
-    "babel": "browserify -e app/components/SweetSearch.jsx -o dist/js/SweetSearch.js -t [ babelify --presets [ es2015 react ] --plugins [ transform-react-constant-elements transform-react-inline-elements ] ]",
-    "build": "jsx app/components/SweetSearch.jsx > dist/js/SweetSearch.js",
+    "build": "babel app/components/SweetSearch.jsx --out-file dist/js/SweetSearch.js",
     "prepublish": "npm run build"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015"
+    ],
+    "ignore": [
+      "dist/**/*.js",
+      "webpack.config.js",
+      "webpack.config.dev.js",
+      "bundle.js"
+    ]
   },
   "author": "",
   "license": "ISC"
