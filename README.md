@@ -1,4 +1,6 @@
 # react-sweet-search
+[react-sweet-search](https://www.npmjs.com/package/react-sweet-search) as React components
+[![NPM](https://nodei.co/npm/react-sweet-search.png)](https://www.npmjs.com/package/react-sweet-search)
 
 ## Description
 React based component Search. Enhance user experience of search.
@@ -8,17 +10,25 @@ React based component Search. Enhance user experience of search.
 ![alt tag](https://cloud.githubusercontent.com/assets/429250/14410807/5a3a68fc-ff6a-11e5-928a-e07914dd7674.gif)
 
 
-## How to Use
+## Installation
+
+Install via [npm](https://www.npmjs.com/package/react-sweet-search)
+
 Step 1:
-* npm install --save react-dom
-* npm install --save react-icons
-* npm install --save react-loading
+```shell
+npm install --save react-sweet-search
+```
 
 Step 2:
-* include SweetSearch.sass
+* include node_module/react-sweet-search/dist/css/SweetSearch.css
 
-Step 3:
+
+## Usage
+
 ```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import SweetSearch from "./components/SweetSearch.jsx";
 
 
@@ -41,6 +51,11 @@ ReactDOM.render(
   document.getElementById("react")
 );
 ```
+
+
+## Author
+
+smallma(s.rain@yahoo.com.tw)
 
 
 ## License
