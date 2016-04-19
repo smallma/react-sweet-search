@@ -2,7 +2,7 @@
   "name": "react-sweet-search",
   "version": "1.0.0",
   "description": "## Description",
-  "main": "Gruntfile.js",
+  "main": "dist/js/SweetSearch.js",
   "devDependencies": {
     "babel-plugin-transform-react-constant-elements": "^6.1.20",
     "babel-plugin-transform-react-inline-elements": "^6.1.20",
@@ -10,6 +10,7 @@
     "babel-preset-react": "^6.1.18",
     "babelify": "^7.2.0",
     "envify": "^3.4.0",
+    "es6ify": "^1.6.0",
     "grunt": "^0.4.5",
     "grunt-browser-sync": "^2.1.3",
     "grunt-browserify": "^4.0.1",
@@ -26,7 +27,8 @@
     "react-addons-shallow-compare": "^0.14.7",
     "react-dom": "^0.14.3",
     "react-router": "^1.0.0",
-    "react-tap-event-plugin": "^0.2.2"
+    "react-tap-event-plugin": "^0.2.2",
+    "react-tools": "^0.13.3"
   },
   "dependencies": {
     "classnames": "^2.2.3",
@@ -37,7 +39,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "grunt": "grunt",
-    "babel": "browserify -e script.jsx -t [ babelify --presets [ es2015 react ] --plugins [ transform-react-constant-elements transform-react-inline-elements ] ]"
+    "babel": "browserify -e app/components/SweetSearch.jsx -o dist/js/SweetSearch.js -t [ babelify --presets [ es2015 react ] --plugins [ transform-react-constant-elements transform-react-inline-elements ] ]",
+    "build": "jsx app/components/SweetSearch.jsx > dist/js/SweetSearch.js",
+    "prepublish": "npm run build"
   },
   "author": "",
   "license": "ISC"
