@@ -1,6 +1,6 @@
 {
   "name": "react-sweet-search",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "## Description",
   "main": "dist/js/SweetSearch.js",
   "bugs": {
@@ -42,10 +42,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "grunt": "grunt",
-    "build": "babel app/components/SweetSearch.js --out-file dist/js/SweetSearch.js",
+    "build": "npm run build-js && npm run build-css",
     "prepublish": "npm run build",
     "start": "babel-node server.js",
-    "build-example": "npm run build && webpack --config webpack.config.js"
+    "build-example": "npm run build && webpack --config webpack.config.js",
+    "build-css": "node-sass --include-path sass app/sass/SweetSearch.sass dist/css/SweetSearch.css",
+    "build-js": "babel app/components/SweetSearch.js --out-file dist/js/SweetSearch.js"
   },
   "babel": {
     "presets": [

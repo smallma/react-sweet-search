@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import FaSearch from 'react-icons/lib/fa/search';
 import Loading from 'react-loading';
 
-require('../sass/SweetSearch.sass');
+// require('../sass/SweetSearch.sass');
 
 
 export default React.createClass({
@@ -15,7 +15,6 @@ export default React.createClass({
       isInputReady: false,
       isBtnSearchClick: false,
       isBtnSearchReady: false,
-      // btnClass: 'btn__search',
       isDisableIconSearch: false,
       isDisableIconLoading: true
     };

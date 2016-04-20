@@ -1,3 +1,6 @@
+.sweet__search .btn__search svg {
+  color: #ffffff; }
+
 .sweet__search input, .sweet__search .btn__search, .sweet__search .btn__search svg {
   display: inline-block;
   vertical-align: middle; }

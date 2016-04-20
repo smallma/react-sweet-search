@@ -26,7 +26,7 @@ var _reactLoading2 = _interopRequireDefault(_reactLoading);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-require('../sass/SweetSearch.sass');
+// require('../sass/SweetSearch.sass');
 
 exports.default = _react2.default.createClass({
   displayName: 'SweetSearch',
@@ -36,7 +36,6 @@ exports.default = _react2.default.createClass({
       isInputReady: false,
       isBtnSearchClick: false,
       isBtnSearchReady: false,
-      // btnClass: 'btn__search',
       isDisableIconSearch: false,
       isDisableIconLoading: true
     };
