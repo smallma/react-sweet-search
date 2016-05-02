@@ -58,6 +58,7 @@ ReactDOM.render(
 ## Author
 
 Designer: Bill Chen (tw0023156@gmail.com)
+
 Coder: smallma(s.rain@yahoo.com.tw)
 
 ## License

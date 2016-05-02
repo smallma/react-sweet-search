@@ -33,9 +33,14 @@ export default React.createClass({
 
     console.log('handleClick: enable input')
     this.setState({
-      isInputActive: true,
       isBtnSearchClick: true,
     });
+
+    setTimeout(function () {
+      that.setState({
+        isInputActive: true,
+      })
+    }, 600);
 
     setTimeout(function () {
       that.setState({
@@ -43,7 +48,7 @@ export default React.createClass({
         isBtnSearchClick: false,
         isBtnSearchReady: true,
       })
-    }, 250);
+    }, 750);
   },
 
   // End Search
@@ -56,7 +61,7 @@ export default React.createClass({
       isInputReady: false,
 
       isBtnSearchClick: true,
-      isBtnSearchReady: true,
+      isBtnSearchReady: false,
 
       isDisableIconSearch: false,
       isDisableIconLoading: true
@@ -67,10 +72,10 @@ export default React.createClass({
       inputDom.value = '';
 
       that.setState({
-        isBtnSearchClick: false,
-        isBtnSearchReady: false,
+        isBtnSearchClick: false
+        // isBtnSearchReady: false,
       })
-    }, 250);
+    }, 600);
   },
 
   _handleSearch: function () {
