@@ -1,3 +1,13 @@
+@keyframes jump {
+  0% {
+    transform: scale(0.1); }
+  60% {
+    transform: scale(1.4); }
+  90% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+
 .sweet__search .btn__search svg {
   color: #ffffff; }
 
@@ -32,12 +42,10 @@
   color: #ffffff;
   font-size: 28px;
   background-color: #00c6ff; }
-  .sweet__search .btn__search.click {
-    font-size: 18px; }
-    .sweet__search .btn__search.click svg {
-      opacity: 0;
-      top: 20px;
-      margin-left: -9px; }
+  .sweet__search .btn__search.click svg {
+    animation-name: jump;
+    animation-duration: 500ms;
+    animation-iteration-count: 1; }
   .sweet__search .btn__search.ready {
     box-shadow: 0 3px 5px #b5b4b4; }
     .sweet__search .btn__search.ready:before {

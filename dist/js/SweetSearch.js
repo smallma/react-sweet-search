@@ -54,9 +54,14 @@ exports.default = _react2.default.createClass({
 
     console.log('handleClick: enable input');
     this.setState({
-      isInputActive: true,
       isBtnSearchClick: true
     });
+
+    setTimeout(function () {
+      that.setState({
+        isInputActive: true,
+      });
+    }, 600ms);
 
     setTimeout(function () {
       that.setState({
@@ -64,7 +69,7 @@ exports.default = _react2.default.createClass({
         isBtnSearchClick: false,
         isBtnSearchReady: true
       });
-    }, 250);
+    }, 750);
   },
 
   // End Search
