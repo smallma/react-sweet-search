@@ -9,7 +9,7 @@ React based component Search. Enhance user experience of search.
 
 
 ## Preview
-![alt tag](https://cloud.githubusercontent.com/assets/429250/14410807/5a3a68fc-ff6a-11e5-928a-e07914dd7674.gif)
+![alt tag](https://cloud.githubusercontent.com/assets/429250/14977047/793363cc-1143-11e6-8d27-92a0c9aeb036.gif)
 
 
 ## Installation
